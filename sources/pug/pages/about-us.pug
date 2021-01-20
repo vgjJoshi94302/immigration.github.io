@@ -1,0 +1,113 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeCategory = 'about'
+  - var pageName = 'About Us'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-1-1920x238'
+  })
+
+  // General Info
+  section.section.section-lg.bg-white
+    .container
+      .row.row-50.justify-content-md-center.justify-content-lg-start
+        .col-md-10.col-lg-6
+          .image-custom-1: +jpg('about-1-601x350')
+
+        .col-md-10.col-lg-6
+          .box-inset-1
+            // Bootstrap tabs 
+            #tabs-about.tabs-custom.tabs-horizontal.tabs-corporate.tabs-corporate_left
+              // Nav tabs
+              ul.nav.nav-tabs
+                li.nav-item: a.nav-link.active(href='#tabs-about-1' data-toggle='tab') What we do
+                li.nav-item: a.nav-link(href='#tabs-about-2' data-toggle='tab') Our Mission
+                li.nav-item: a.nav-link(href='#tabs-about-3' data-toggle='tab') Our Goal 
+  
+              // Tab panes
+              .tab-content
+                div#tabs-about-1.tab-pane.fade.show.active
+                  h4 Translation & Interpreting
+                  p Equiso, vita, et parma. Racanas sunt adgiums de camerarius ignigena. Cum aonides peregrinatione, omnes fermiumes anhelare rusticus, ferox deuses.
+                  p Silva undas, tanquam gratis brabeuta. Sunt terrores captis brevis, peritus decores. Ubi est talis accola? Hippotoxota moris, tanquam fidelis lacta. Est audax triticum, cesaris. Ventuss experimentum in hamburgum! Azureus, regius competitions sed mire visum de alter, placidus demissio.
+  
+                div#tabs-about-2.tab-pane.fade
+                  h4 Providing Quality Translation
+                  p Nunquam imperium index. A falsis, agripeta peritus itineris tramitem. Alter, regius danistas recte visum de domesticus, emeritis omnia.
+                  p Lura albus clabulare est. Ecce, adgium! Lunas accelerare! Tus faveres, tanquam bassus silva. A falsis, nuclear vexatum iacere varius clabulare. Peritus, placidus humani generiss aegre manifestum de alter, fidelis brodium. Hercle, calcaria salvus!, index! Varius, secundus competitions absolute locus de germanus, emeritis bubo.
+  
+                div#tabs-about-3.tab-pane.fade
+                  h4 Serving Your Business Needs
+                  p Species, torus, et saga. Nomens unda, tanquam peritus heuretes. Cum buxum ridetis, omnes orexises carpseris superbus, lotus adiuratores.
+                  p Ususs mori, tanquam domesticus cannabis. Nunquam gratia messor. Danistas trabem in flavum hamburgum! Lumen clemens homo est. Nutrix, cannabis, et tata. Repressors studere! Lactea experimentums, tanquam magnum lura. Lacteas trabem in oenipons! Cum mens resistere, omnes cliniases magicae emeritis, velox nutrixes.
+  ="\n" 
+
+  // Team
+  section.section.section-lg.bg-gray-light.text-center
+    .container
+      h2 Meet Our Team
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Card Creative
+          article.card-creative
+            .card-creative__inner
+              figure.card-creative__media
+                +jpg('team-1-230x211')
+              p.card-creative__title Charles Russell
+              p.card-creative__subtitle Production Engineer
+              .card-creative__divider
+              .card-creative__aside
+                ul.list-inline.list-inline-md
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-facebook(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-twitter(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-google-plus(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-pinterest-p(href='#')
+
+        .col-md-6.col-lg-4
+          // Card Creative
+          article.card-creative
+            .card-creative__inner
+              figure.card-creative__media
+                +jpg('team-2-230x211')
+              p.card-creative__title Anthony Hughes
+              p.card-creative__subtitle Leading Translator
+              .card-creative__divider
+              .card-creative__aside
+                ul.list-inline.list-inline-md
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-facebook(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-twitter(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-google-plus(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-pinterest-p(href='#')
+
+        .col-md-6.col-lg-4
+          // Card Creative
+          article.card-creative
+            .card-creative__inner
+              figure.card-creative__media
+                +jpg('team-3-230x211')
+              p.card-creative__title Rose Bryant
+              p.card-creative__subtitle Interpreter
+              .card-creative__divider
+              .card-creative__aside 
+                ul.list-inline.list-inline-md
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-facebook(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-twitter(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-google-plus(href='#')
+                  li: a.icon.icon-xs.icon-darker.icon-style-brand.fa.fa-pinterest-p(href='#')
+  ="\n"
+
+  include ../sections/_section-about-facts
+  include ../sections/_section-our-clients
+  include ../sections/_section-partners
+    
+
+  // Page Footer
+  include ../sections/_footer-classic

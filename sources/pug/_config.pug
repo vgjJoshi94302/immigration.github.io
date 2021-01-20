@@ -1,0 +1,77 @@
+-
+  var
+  brandName = 'Metaphorist',
+  logo = {
+    default: 'logo-default-427x118.png',
+    inverse: 'logo-default-427x118.png'
+  }
+  postLink = 'blog-post.html', 
+  getTemplateLink = '#get-template-link',
+  menu = [
+    {
+      title: 'Home',
+      link: 'index.html',
+      category: 'home'
+    },
+    {
+      title: 'About Us',
+      category: 'about'
+    },
+
+    { 
+      title: 'Services',
+      category: 'services',
+       dropdown: [
+        { title: 'Single Service' }
+      ]
+    },
+    {
+      title: 'Blog',
+      category: 'blog',
+      dropdown: [
+        { title: 'Blog post' }
+      ]
+    },
+    {
+      title: 'Pages',
+      category: 'pages', 
+      link: '#',
+      megamenu: [
+        {
+          title: 'Pages 1',
+          list: [
+            { title: 'Pricing Tables' },
+            { title: 'Login' },
+            { title: 'FAQ' },
+            { title: 'Tabs and Accordions' },
+            { title: 'Typography' }
+          ]
+        },
+        {
+          title: 'Pages 2',
+          list: [
+            { title: '404 page' },
+            { title: '503 page' },
+            { title: 'Coming soon' },
+            { title: 'Maintenance' },
+            { title: 'Privacy policy' },
+            { title: 'Search results' }
+          ]
+        },
+        {
+          title: 'Elements',
+          list: [
+            { title: 'Buttons' },
+            { title: 'Forms' },
+            { title: 'Grid system' },
+            { title: 'Progress bars' }, 
+            { title: 'Tables' }
+          ]
+        }
+      ]
+    },
+    { 
+      title: 'Contact Us',
+      category: 'contact-us'
+    }
+  ]

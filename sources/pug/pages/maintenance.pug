@@ -1,0 +1,31 @@
+extends  ../_skeleton
+include ../elements/_countdown
+//- Includes
+
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Maintenance'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-1-1920x238'
+  })
+
+  // Maintenance
+  section.section.section-md.bg-white.text-center
+    .container
+      h4.text-default We are currently working on
+      h2 This page will appear in
+      .block-xl
+        +countdown({to: '2019-12-31'}).countdown-1
+       
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic
+  

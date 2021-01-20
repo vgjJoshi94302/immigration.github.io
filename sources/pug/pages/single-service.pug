@@ -1,0 +1,121 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-box-alice
+  
+block variables
+  - var activeCategory = 'services'
+  - var pageName = 'Single Service'
+
+block page
+  include ../sections/_header-classic
+
+  // Get a Domain Name
+  section.section.section-md.bg-image.bg-image-dark.bg-overlay-1.text-center(style='background-image: url(images/bg-image-1-1920x238.jpg);')
+    .container
+      h2 Single Service
+      p Find out more about one of our services
+  ="\n"
+
+  // Search Form
+  section.section.section-xs.bg-gray-light
+    .container
+      .row.justify-content-md-center
+        .col-xl-10
+          form.rd-mailform.form_inline.form_lg.form_inline-corporate
+            .form-wrap.form-wrap_long 
+              input#search-text.form-input(type="text" name="search-text")
+              label.form-label(for="search-text") Enter your search request...
+              
+            .form-wrap.form-wrap-select
+              // Select 2
+              select.form-input.select(data-placeholder="All", data-minimum-results-for-search="Infinity")
+                option(label="placeholder") 
+                option(value="1") Translation
+                option(value="2") Interpreting
+                option(value="3") Apostille
+                option(value="4") Legalization
+              
+            .form-footer
+              .form-wrap.form-button
+                button.button.button-lg.button-primary.button-ujarak(type='button') Search
+  ="\n"
+
+  // Main features
+  section.section.section-sm.bg-white
+    .container
+      .row.row-30
+        .col-md-6.col-lg-4
+          +box-alice({
+            icon: 'linearicons-bag-dollar',
+            title: 'Competitive Prices'
+          })
+            p Sunt amores tractare magnum, varius gloses. Monss sunt hibridas de peritus zeta.
+
+        .col-md-6.col-lg-4
+          +box-alice({
+            icon: 'linearicons-rocket',
+            title: 'Always Quick and Efficient'
+          })
+            p Vae, luna! Cobaltums studere in cubiculum! Cum omnes fugaes talem castus, dexter domuses.
+
+        .col-md-6.col-lg-4
+          +box-alice({
+            icon: 'linearicons-cashier',
+            title: 'Flawless Delivery'
+          })
+            p Pius, placidus competitions etiam pugna de grandis, clemens luna fugaes talem.
+  ="\n"
+
+  // Pricing
+  section.section.section-md.bg-white.text-center
+    .container 
+      h2 Pricing
+      .table-custom-responsive
+        table.table-custom.table-custom-striped.table-custom-secondary
+          thead
+            tr
+              th Service
+              th Term
+              th Price
+              th Discount
+              th Total
+
+          tbody
+            tr
+              td Advertising translation
+              td 5 days
+              td $ 65.00
+              td 10%
+              td $57.00
+            tr
+              td Banking translation
+              td 3 days
+              td $ 30.00
+              td 15%
+              td $ 25.00
+            tr
+              td Proofreading
+              td 4 days
+              td $ 40.00
+              td 20%
+              td $ 32.00
+            tr
+              td Quality assessment
+              td 2 Days
+              td $ 50.00
+              td 25%
+              td $ 37.00
+            tr
+              td Video translation
+              td 6 days
+              td $ 44.00
+              td 30%
+              td $ 30.00
+  ="\n"
+
+  include ../sections/_section-questions
+
+  // Page Footer
+  include ../sections/_footer-classic
+

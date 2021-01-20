@@ -1,0 +1,77 @@
+/*
+*
+* Page Loaders
+*/
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: $white;
+  transition: .3s all ease;
+
+  [data-x-mode='true'] &,
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+.preloader-body {
+  text-align: center;
+  img {
+    max-width: 213px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+* + .cssload-wrapper { margin-top: 30px; }
+
+
+// Custom Styles
+// -------------------------
+.cssload-wrapper {
+  width: 100vw;
+}
+
+.cssload-border {
+  position: relative;
+  width: 100%;
+  padding: 8px;
+}
+
+.cssload-whitespace {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 5px;
+  margin: 0 auto;
+  background: $gray-light;
+}
+
+.cssload-line {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-color: $primary;
+  animation: cssload-slide 3s ease-in-out infinite both;
+}
+
+@keyframes cssload-slide {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}

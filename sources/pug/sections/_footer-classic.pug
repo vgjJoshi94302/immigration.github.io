@@ -1,0 +1,83 @@
+//- Includes
+include ../elements/_ui-inline-subscribe-form
+include ../elements/_ui-post-small
+  
+footer.section.footer-classic.context-dark
+  .footer-classic__main.bg-gray-3
+    .container
+      .row.row-50.align-items-sm-end.justify-content-sm-center.justify-content-lg-start
+        .col-lg-6
+          .footer-classic__custom-column
+            .unit.flex-sm-row.unit-spacing-md
+              .unit__left: span.icon.icon-md.icon-default.icon-gradient.linearicons-headset
+              .unit__body
+                a.link.link-lg(href='tel:#') 1-800-700-6200
+                p.ls-1 We are available for consultation 24/7
+
+        .col-md-10.col-lg-6
+          .group-md
+            h3 Subscribe
+            p.large Get the latest updates and offers
+          +inline-subscribe-form({
+            classMod: 'form_lg',
+            customUnique: 'footer-form',
+            customBtnClasses: 'button-lg button-primary button-ujarak'
+          })
+
+      .row.row-50.justify-content-md-center.justify-content-lg-start.justify-content-xl-between
+        .col-md-5.col-lg-3
+          p.custom-heading-1.custom-heading-bordered About us
+          .divider
+          p.ls-05 Metaphorist is a leading translation company offering top-quality translation and localization services.
+          ul.list-inline.list-inline-xs
+            li: a.icon.icon-xxs.icon-circle.icon-filled.icon-filled_brand.fa.fa-facebook(href='#')
+            li: a.icon.icon-xxs.icon-circle.icon-filled.icon-filled_brand.fa.fa-twitter(href='#')
+            li: a.icon.icon-xxs.icon-circle.icon-filled.icon-filled_brand.fa.fa-google-plus(href='#')
+            li: a.icon.icon-xxs.icon-circle.icon-filled.icon-filled_brand.fa.fa-instagram(href='#')
+
+        .col-md-5.col-lg-4.col-xl-3
+          p.custom-heading-1.custom-heading-bordered Latest news
+          .divider
+          .post-small-wrap
+            +post-small({
+              img: 'post-small-1-80x68',
+              title: "The Real Value of Quality Translations",
+              time: {
+                datetime: '2019',
+                datevalue: 'January 12, 2019'
+              }
+            })
+            +post-small({
+              img: 'post-small-2-80x68',
+              title: "Are Professional Translators Creative?",
+              time: {
+                datetime: '2019',
+                datevalue: 'January 12, 2019'
+              } 
+            })
+
+        .col-md-10.col-lg-5.col-xl-4 
+          p.custom-heading-1.custom-heading-bordered Useful Links
+          .divider
+          .row.row-5
+            .col-sm-6
+              ul.list-marked.list-marked_primary
+                li: a(href='about-us.html') About Our Company
+                li: a(href='#') Our Team
+                li: a(href='services.html') Services
+                li: a(href='pricing-tables.html') Pricing
+                li: a(href='faq.html') FAQ
+
+            .col-sm-6
+              ul.list-marked.list-marked_primary
+                li: a(href='#') Testimonials
+                li: a(href='blog.html') Blog
+                li: a(href='contact-us.html') Contact Us
+                li: a(href='privacy-policy.html') Privacy Policy
+
+  .footer-default__aside.bg-gray-5
+    .container: .footer-default__aside-inner
+      +rights
+      ul.list-separated.list-inline
+        li: a(href='privacy-policy.html') Privacy Policy
+="\n"

@@ -1,0 +1,16 @@
+mixin box-alice(obj)
+  // Box Alice
+  article.box-alice: .box-alice__inner
+    .box-alice__aside
+      svg.box-alice__border(viewbox='0 0 79 79')
+        circle(cx='39', cy='39', r='39')
+      .box-alice__icon-outer
+        span.box-alice__icon(class=obj.icon)
+
+
+
+
+
+    .box-alice__main
+        h5.box-alice__title=obj.title
+        block

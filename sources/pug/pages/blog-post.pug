@@ -1,0 +1,162 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+  
+block variables
+  - var activeCategory = 'blog'
+  - var pageName = 'Blog post'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-1-1920x238'
+  })
+     
+  // Blog post
+  section.section.section-lg.bg-white
+    .container
+      article.blog-layout
+        .blog-layout__main
+          article.post-single 
+            .post-single__header
+              ul.post-single__meta
+                li
+                  span.icon.mdi.mdi-comment-outline
+                  a(href='#') 3
+                li
+                  span.icon.mdi.mdi-thumb-up-outline
+                  a(href='#') 12
+                  
+              ul.post-single__meta
+                li
+                  span.icon.mdi.icon.mdi.mdi-account
+                  span by
+                  a(href='#') John Doe
+                  
+            .post-single__time-wrap
+              time.post-single__time(datetime='2019')
+                span.post-single__time-day 25
+                span.post-single__time-month June
+                  
+            h4.post-single__title Business Outlook – Languages To Know In 2019 to Be Successful & Recognized
+            p Fidelis elogiums ducunt ad barcas. Cur torus cadunt? Devirginatos favere in clemens antenna! A falsis, domina castus absolutio. Nunquam imperium lura. Experimentum diligenter ducunt ad barbatus aonides. Decor superbus domus est. Nunquam locus cannabis. Mortem accelerares, tanquam alter era. Cur fuga nocere? Ubi est rusticus musa? Ecce. Ubi est placidus danista? Est festus particula, cesaris. Cum cacula potus, omnes bromiumes gratia raptus, pius zetaes.
+            +jpg('blog-post-1-715x417')
+            p Idoleum de camerarius fermium, amor valebat! Deus, demissio, et devirginato. Mori sed mire ducunt ad altus compater. Indictio, capio, et lumen. A falsis, mensa ferox classis. Est dexter tumultumque, cesaris. Cur sectam messis? Planetas trabem, tanquam superbus guttus. Messis aliquando ducunt ad secundus itineris tramitem. Emeritis eleatess ducunt ad axona. Uria ridetiss, tanquam secundus quadra. Luna, hilotae, et cacula. Lactea, palus, et clabulare. Cottas cadunt! Primus, brevis valebats rare tractare de fatalis, regius compater. Est barbatus gluten, cesaris. Est raptus verpa, cesaris. Ususs tolerare! Est raptus nomen, cesaris. Velum aliquando ducunt ad salvus burgus. Heu, cacula! Coordinatae de mirabilis era, examinare elogium! Camerarius, fatalis lapsuss acceleratrix imperium de primus, azureus frondator.
+            article.quote-classic.quote-classic_secondary
+              .quote-classic__body
+                svg.quote-classic__mark(version='1.1' xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='21px', height='15px', viewbox='0 0 21 15', overflow='scroll', xml:space='preserve', preserveAspectRatio='none')
+                  path(d='M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316\
+                                               c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37\
+                                               C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316\
+                                               c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37\
+                                               C20.106,7.145,20.987,8.493,20.987,10.412z')
+                .quote-classic__text: p A falsis, ventus barbatus calcaria. Zelus, ignigena, et imber. Pius, clemens rumors vix examinare de mirabilis, bi-color gabalium.
+            p Clabulares prarere in tubinga! Particula de lotus adelphis, visum mineralis! Placidus liberi sensim apertos adiurator est. Hercle, hydra neuter!, habitio! Accelerare aegre ducunt ad teres frondator. Brevis stellas ducunt ad fermium. Torquis, vigil, et brabeuta. Solitudos persuadere in tectum! Mineralis congregabos, tanquam raptus spatii. Assimilant satis ducunt ad teres heuretes. Caesium, humani generis, et ionicis tormento. Bassus fermium sed mire demittos epos est. Superbus adgium saepe tractares castor est. Solem de castus fraticinida, magicae rector! Messors ridetis in tolosa! Sunt lumenes perdere varius, pius nutrixes. Est dexter nuclear vexatum iacere, cesaris. Cum agripeta accelerare, omnes torquises manifestum velox, mirabilis terrores.
+            
+            .post-single__footer
+              .post-single__footer-inner
+                h5 Share this post
+                ul.list-inline.list-inline-xsm
+                  li: a.icon.icon-xs.icon-gray-dark.fa.fa-facebook(href='#')
+                  li: a.icon.icon-xs.icon-gray-dark.fa.fa-twitter(href='#')
+                  li: a.icon.icon-xs.icon-gray-dark.fa.fa-google-plus(href='#')
+                  li: a.icon.icon-xs.icon-gray-dark.fa.fa-pinterest-p(href='#')
+          ="\n"
+          
+          .section-md.section-collapse
+            p.custom-heading-line.heading-8 Recent posts
+            .row.row-50
+              .col-md-6
+                // Post Minimal
+                article.post-minimal
+                  a.post-minimal__media(href=postLink)
+                    +jpg('single-post-2-368x293', 'post-minimal__image')
+                  h4.post-minimal__title: a(href=postLink) The Real Value of Quality Translations
+
+                  ul.post-minimal__meta
+                    li
+                      span.icon.mdi.mdi-comment-outline
+                      a(href=postLink) 3
+                    li
+                      span.icon.mdi.mdi-thumb-up-outline
+                      a(href='#') 12
+                    li
+                      span.icon.mdi.mdi-account
+                      span by
+                      a(href='#') John Doe
+                      
+              .col-md-6 
+                // Post Minimal
+                article.post-minimal
+                  a.post-minimal__media(href=postLink)
+                    +jpg('single-post-3-368x293', 'post-minimal__image')
+                  h4.post-minimal__title: a(href=postLink) Are Professional Translators Creative?
+
+                  ul.post-minimal__meta
+                    li
+                      span.icon.mdi.mdi-comment-outline
+                      a(href=postLink) 3
+                    li
+                      span.icon.mdi.mdi-thumb-up-outline
+                      a(href='#') 12
+                    li
+                      span.icon.mdi.mdi-account
+                      span by
+                      a(href='#') John Doe
+                      
+          .section-md.section-collapse
+            p.custom-heading-line.heading-8 Comments
+          
+            .comment-group
+              +comment({
+                img: 'user-1-82x82',
+                title: 'Samantha',
+                time: "3 days ago",
+                likes: '12',
+                text: "Peregrinationes saepe ducunt ad bi-color hippotoxota. Ecce, bassus pulchritudine! Vae, regius omnia! Cannabiss studere, tanquam noster classis. Hercle, magister germanus!. Pol, a bene brodium, bursa! Ubi est primus usus? Mirabilis competition saepe vitares quadra est. Cum nutrix unda, omnes fraticinidaes demitto festus, fatalis rumores. Ubi est teres apolloniates."
+              })
+  
+              .comment-group
+                +comment({
+                  img: 'user-2-82x82',
+                  title: 'Edward',
+                  time: "1 day ago",
+                  likes: '53',
+                  text: "Vae, medicina! Zeluss tolerare! Pius hippotoxota sensim manifestums impositio est. Ubi est superbus pars? Castus accolas ducunt ad detrius. Terrors nocere in brigantium! Azureus, gratis nixs cito magicae de talis, salvus navis."
+                })
+  
+            .comment-group
+              +comment({
+                img: 'user-3-82x82',
+                title: 'Eric',
+                time: "2 days ago",
+                likes: '12',
+                text: "Calcaria de nobilis messor, consumere consilium! Hercle, omnia fortis!. Eposs peregrinationes in clemens gandavum! Byssus de bi-color pes, acquirere particula! Genetrixs sunt exsuls de castus glos. Eheu. Byssus regius historia est. Mortems ridetis! Ubi est salvus tumultumque? Imber assimilants, tanquam noster gabalium. Cum liberi unda, omnes mensaes contactus dexter, teres glutenes."
+              })
+               
+           
+            .comment-box
+              .unit.flex-md-row
+                .unit__left
+                  +jpg('user-4-82x82', 'comment-box__image')
+                .unit__body
+                  p.heading-8 Linda
+                  form.rd-mailform.form_outline
+                    .form-wrap
+                      label.form-label(for="comment-message") Write Your Comment...
+                      textarea#comment-message.form-input(name="message" data-constraints="@Required")
+
+                    .form-button
+                      button.button.button-lg.button-primary.button-ujarak(type="submit") Submit
+
+
+        include ../includes/_blog-aside
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic
+

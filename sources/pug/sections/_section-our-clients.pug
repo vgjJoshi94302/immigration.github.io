@@ -1,0 +1,45 @@
+// Our Clients
+section.section.section-md.bg-gray-light.text-center
+  .container
+    h2 Our Clients
+    // Owl Carousel 
+    .owl-outer-navigation-wrap.owl-carousel_nav-modern.wow.fadeIn
+      .owl-carousel.quote-creative-carousel(
+      data-items='1' 
+      data-lg-items='2' 
+      data-dots='true' 
+      data-nav='true' 
+      data-stage-padding='0' 
+      data-loop='true' 
+      data-margin='30' 
+      data-mouse-drag='false' 
+      data-navigation-container='#owl-carousel-nav' data-dots-each='1')
+        .item
+          // Quote Creative
+          article.quote-creative 
+            .quote-creative__header
+              .quote-creative__media: +jpg('client-1-112x99')
+              .quote-creative__info
+                p.quote-creative__title Patrick Wilson
+                p.quote-creative__subtitle Regular Client
+            .quote-creative__main
+              +quote-mark-2('quote-creative__mark')
+              .quote-creative__main-text
+                p The experts at Metaphorist are incredibly professional and patient. They helped me with some challenging material over a period of hours with a great attitude and put my client at ease.
+
+        .item
+          // Quote Creative
+          article.quote-creative
+            .quote-creative__header
+              .quote-creative__media: +jpg('client-2-112x99')
+              .quote-creative__info
+                p.quote-creative__title Kate Williams
+                p.quote-creative__subtitle Regular Client
+            .quote-creative__main
+              +quote-mark-2('quote-creative__mark')
+              .quote-creative__main-text
+                p I’m delighted to be working with Metaphorist. Their team turns around projects on time and with accuracy taking into account the context. All their projects have been delivered on time.
+
+
+      #owl-carousel-nav.owl-outer-navigation
+="\n"
